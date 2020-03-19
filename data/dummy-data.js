@@ -14,7 +14,7 @@ export const CATEGORIES = [
 
 export const RECEPIES = [
     new Recepie(
-        'm8',
+        'r8',
         ['c8'],
         'Creamy Indian Chicken Curry',
         'pricey',
