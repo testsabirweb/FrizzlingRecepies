@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
-import { Text, View } from 'react-native';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
 import { enableScreens } from 'react-native-screens';
+import { createStore, combineReducers } from 'redux'
+import { Provider } from 'react-redux'
 
 import RecepiesNavigator from './navigation/RecepiesNavigator';
+import recepiesReducer from './store/reducers/recepies';
 
 enableScreens();
+
+const rootReducer = combineReducers({
+    recepies: recepiesReducer
+})
+
+const store = createStore(rootReducer)
 
 const fetchFonts = () => {
     return Font.loadAsync({
@@ -27,5 +35,9 @@ export default function App() {
         );
     }
 
-    return <RecepiesNavigator />;
+    return (
+        <Provider store={store}>
+            <RecepiesNavigator />
+        </Provider>
+    );
 }
