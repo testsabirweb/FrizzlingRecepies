@@ -1,5 +1,5 @@
 import React from 'react'
-import { Platform } from 'react-native';
+import { Platform, Dimensions } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
@@ -19,7 +19,8 @@ const defaultStackNavOption = {
         backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : ''
     },
     headerTitleStyle: {
-        fontFamily: 'open-sans-bold'
+        fontFamily: 'open-sans-bold',
+        width: Dimensions.get('window').width * 0.66
     },
     headerBackStyle: {
         fontFamily: 'open-sans'

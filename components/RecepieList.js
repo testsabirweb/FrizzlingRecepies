@@ -1,9 +1,13 @@
 import React from 'react'
 import { FlatList, StyleSheet, View } from 'react-native'
 import RecepieItem from './RecepieItem'
+import { useSelector } from 'react-redux'
 
 const RecepieList = (props) => {
+    const favoriteRecepies = useSelector((state) => state.recepies.favoriteRecepies)
+
     const renderRecepieItem = itemData => {
+        const isFav = favoriteRecepies.some((recepie) => recepie.id === itemData.item.id)
         return (
             <RecepieItem
                 title={itemData.item.title}
@@ -15,7 +19,9 @@ const RecepieList = (props) => {
                     props.navigation.navigate({
                         routeName: 'RecepieDetail',
                         params: {
-                            recepieId: itemData.item.id
+                            recepieId: itemData.item.id,
+                            recepieTitle: itemData.item.title,
+                            isFav: isFav
                         }
                     });
                 }}
