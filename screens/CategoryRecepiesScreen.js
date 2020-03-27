@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native'
 import { useSelector } from 'react-redux'
+import { HeaderButtons, Item } from 'react-navigation-header-buttons'
+import HeaderButton from '../components/HeaderButton'
 
 import { CATEGORIES } from '../data/dummy-data';
 import RecepieList from '../components/RecepieList'
@@ -35,7 +37,12 @@ CategoryRecepiesScreen.navigationOptions = navigationData => {
     const selectedCategory = CATEGORIES.find(cat => cat.id === catId);
 
     return {
-        headerTitle: selectedCategory.title
+        headerTitle: selectedCategory.title,
+        headerRight: <HeaderButtons HeaderButtonComponent={HeaderButton} >
+            <Item title='filters' iconName='ios-switch' onPress={() => {
+                navigationData.navigation.navigate('Filters')
+            }} />
+        </HeaderButtons>
     };
 };
 const styles = StyleSheet.create({

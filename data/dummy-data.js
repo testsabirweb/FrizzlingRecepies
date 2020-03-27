@@ -2,8 +2,8 @@ import Category from '../models/category';
 import Recepie from '../models/recepie';
 
 export const CATEGORIES = [
-    new Category('c1', 'Healthy', '#f5428d'),
-    new Category('c2', 'Quick & Easy', '#f54242'),
+    new Category('c1', 'Healthy', '#66ffc2'),
+    new Category('c2', 'Quick & Easy', '#ffff4d'),
     new Category('c3', 'Sweets', '#f5a442'),
     new Category('c4', 'Chinese', '#f5d142'),
     new Category('c5', 'Light & Lovely', '#368dff'),
@@ -39,6 +39,34 @@ export const RECEPIES = [
             'Serve with rice'
         ],
         false,
+        true,
+    ),
+    new Recepie(
+        'r1',
+        ['c1'],
+        'Vegetable Som Tam Salad',
+        'cheap',
+        'easy',
+        'https://c.ndtvimg.com/1hkfbvu_som-tam-salad_625x300_04_September_18.jpg',
+        15,
+        [
+            '150 gms raw papaya, shredded',
+            '30 gms carrot, julienne',
+            '30 gms French bean diamond',
+            '30 gms cherry tomato',
+            '5 gms garlic',
+            '3 gms crush mix chilli',
+            '45 ml somtam dressing',
+            '10 gms peanuts (crushed), roasted',
+            '5 gms peanuts, roasted',
+        ],
+        [
+            'Pound chillies and garlic together in a mortar. Add beans and pound.',
+            'Add Som tam sauce and mix well. Add crushed roasted peanuts.',
+            'Now add cherry tomato, raw papaya and carrot to mix well',
+            'Put in a platter and garnish with roasted peanuts'
+        ],
+        true,
         true,
     )
 ];

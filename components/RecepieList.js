@@ -1,7 +1,8 @@
 import React from 'react'
 import { FlatList, StyleSheet, View } from 'react-native'
-import RecepieItem from './RecepieItem'
 import { useSelector } from 'react-redux'
+
+import RecepieItem from './RecepieItem'
 
 const RecepieList = (props) => {
     const favoriteRecepies = useSelector((state) => state.recepies.favoriteRecepies)

@@ -11,6 +11,7 @@ import CategoryRecepiesScreen from '../screens/CategoryRecepiesScreen';
 import RecepieDetailScreen from '../screens/RecepieDetailScreen';
 import FavoritesScreen from '../screens/FavoritesScreen'
 import FiltersScreen from '../screens/FiltersScreen';
+import SearchScreen from '../screens/SearchScreen'
 import Colors from '../constants/Colors';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -37,7 +38,8 @@ const RecepiesNavigator = createStackNavigator(
         CategoryRecepies: {
             screen: CategoryRecepiesScreen
         },
-        RecepieDetail: RecepieDetailScreen
+        RecepieDetail: RecepieDetailScreen,
+        Search: SearchScreen
     },
     {
         // initialRouteName: 'Categories',
