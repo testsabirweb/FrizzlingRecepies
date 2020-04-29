@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import DefaultText from '../components/DefaultText'
 import HeaderButton from '../components/HeaderButton'
 import { toggleFavorite } from '../store/actions/recepies';
+import Colors from '../constants/Colors';
 
 const RecepieDetailScreen = props => {
     const availableRecepies = useSelector((state) => {
@@ -70,7 +71,8 @@ RecepieDetailScreen.navigationOptions = navigationData => {
         headerRight: <HeaderButtons HeaderButtonComponent={HeaderButton} >
             <Item
                 title="Favorite"
-                iconName={isFavorite ? 'ios-star' : 'ios-star-outline'}
+                iconName={isFavorite ? 'ios-heart' : 'ios-heart-empty'}
+                color='#ff6666'
                 onPress={toggleFavorite} />
         </HeaderButtons>
     };
@@ -84,14 +86,15 @@ const styles = StyleSheet.create({
     details: {
         flexDirection: "row",
         padding: 15,
-        justifyContent: "space-around"
+        justifyContent: "space-around",
+        backgroundColor:'#e6ecff',
     },
     title: {
         fontFamily: 'open-sans-bold',
         fontSize: 22,
         textAlign: "center",
-        backgroundColor: '#ccebff',
-        borderRadius: 20,
+        backgroundColor: Colors.secondaryColor,
+        borderRadius: 10,
         elevation: 5,
         margin: 20,
         padding: 5

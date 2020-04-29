@@ -77,7 +77,7 @@ const tabScreenConfig = {
         navigationOptions: {
             tabBarLabel: 'Favorites!',
             tabBarIcon: (tabInfo) => {
-                return <Ionicons name='ios-star-outline' size={25} color={tabInfo.tintColor} />
+                return <Ionicons name='ios-heart-empty' size={25} color={tabInfo.tintColor} />
             },
             tabBarColor: Colors.accentColor,
             tabBarLabel: Platform === 'android' ?

@@ -2,20 +2,20 @@ import Category from '../models/category';
 import Recepie from '../models/recepie';
 
 export const CATEGORIES = [
-    new Category('c1', 'Healthy', '#66ffc2'),
-    new Category('c2', 'Quick & Easy', '#ffff4d'),
-    new Category('c3', 'Sweets', '#f5a442'),
-    new Category('c4', 'Chinese', '#f5d142'),
+    new Category('c1', 'Healthy', '#9eecff'),
+    new Category('c2', 'Quick & Easy', '#ffccff'),
+    new Category('c3', 'Sweets', '#ffff80'),
+    new Category('c4', 'Chinese', '#b3ffb3'),
     new Category('c5', 'Light & Lovely', '#368dff'),
     new Category('c6', 'Dinner', '#41d95d'),
-    new Category('c7', 'Breakfast', '#9eecff'),
+    new Category('c7', 'Breakfast', '#9999ff'),
     new Category('c8', 'Desi', '#b9ffb0'),
 ];
 
 export const RECEPIES = [
     new Recepie(
         'r8',
-        ['c8'],
+        ['c8', 'c6'],
         'Creamy Indian Chicken Curry',
         'pricey',
         'challenging',
@@ -42,8 +42,30 @@ export const RECEPIES = [
         true,
     ),
     new Recepie(
+        'r3',
+        ['c1', 'c2', 'c3'],
+        'MilkShake',
+        'cheap',
+        'easy',
+        'https://cdn3.foodviva.com/static-content/food-images/milkshake-recipes/coffee-milkshake-recipe/coffee-milkshake-recipe.jpg',
+        5,
+        [
+            '4 large scoops (about 1 1/2 c.) vanilla ice cream',
+            '1/4 c. milk',
+            'Whipped topping, for garnish',
+            'Sprinkles, for garnish',
+            'Maraschino cherry, for garnish'
+        ],
+        [
+            'In a blender, blend together ice cream and milk. ',
+            'Pour into a glass and garnish with whipped topping, sprinkles, and a cherry.',
+        ],
+        true,
+        false,
+    ),
+    new Recepie(
         'r1',
-        ['c1'],
+        ['c1', 'c2', 'c5'],
         'Vegetable Som Tam Salad',
         'cheap',
         'easy',
@@ -68,5 +90,30 @@ export const RECEPIES = [
         ],
         true,
         true,
+    ),
+    new Recepie(
+        'r4',
+        ['c3', 'c6'],
+        'Choclate Cake',
+        'Expensive',
+        'Hard',
+        'https://media.way2flowers.com/media/catalog/product/cache/1/thumbnail/500x/17f82f742ffe127f42dca9de82fb58b1/P/F/PFCAKE018-coffee-chocolate-cake.jpg',
+        40,
+        [
+            '1 cup white sugar',
+            '½ cup butter',
+            '2 eggs',
+            '2 teaspoons vanilla extract',
+            '1 ½ cups all-purpose flour',
+            '1 ¾ teaspoons baking powder',
+            '½ cup milk'
+        ],
+        [
+            'Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x9 inch pan or line a muffin pan with paper liners.',
+            'In a medium bowl, cream together the sugar and butter. Beat in the eggs, one at a time, then stir in the vanilla. Combine flour and baking powder, add to the creamed mixture and mix well. Finally stir in the milk until batter is smooth. Pour or spoon batter into the prepared pan.',
+            'Bake for 30 to 40 minutes in the preheated oven. For cupcakes, bake 20 to 25 minutes. Cake is done when it springs back to the touch.'
+        ],
+        false,
+        false,
     )
 ];

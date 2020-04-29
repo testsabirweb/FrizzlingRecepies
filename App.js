@@ -7,6 +7,16 @@ import { Provider } from 'react-redux'
 
 import RecepiesNavigator from './navigation/RecepiesNavigator';
 import recepiesReducer from './store/reducers/recepies';
+import { initDB } from './database/db'
+
+initDB()
+    .then(() => {
+        console.log('Initialize database successfully')
+    })
+    .catch(err => {
+        console.log('Initialization of database failed')
+        console.log(err)
+    })
 
 enableScreens();
 
