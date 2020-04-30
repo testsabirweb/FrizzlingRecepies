@@ -6,10 +6,10 @@ export const CATEGORIES = [
     new Category('c2', 'Quick & Easy', '#ffccff'),
     new Category('c3', 'Sweets', '#ffff80'),
     new Category('c4', 'Chinese', '#b3ffb3'),
-    new Category('c5', 'Light & Lovely', '#368dff'),
-    new Category('c6', 'Dinner', '#41d95d'),
+    new Category('c5', 'Light & Lovely', '#80ffbf'),
+    new Category('c6', 'Dinner', '#368dff'),
     new Category('c7', 'Breakfast', '#9999ff'),
-    new Category('c8', 'Desi', '#b9ffb0'),
+    new Category('c8', 'Indian', '#b9ffb0'),
 ];
 
 export const RECEPIES = [

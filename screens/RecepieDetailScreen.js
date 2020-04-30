@@ -36,7 +36,8 @@ const RecepieDetailScreen = props => {
     const RecepieItem = (props) => {
         return (
             <View style={styles.recepieItem}>
-                <DefaultText>{props.children}</DefaultText>
+                <View><Text style={styles.index}>{props.index}</Text></View>
+                <View><Text>{props.item}</Text></View>
             </View>
         )
     }
@@ -51,11 +52,19 @@ const RecepieDetailScreen = props => {
             </View>
             <Text style={styles.title}>Ingredients</Text>
             {selectedRecepie.ingredients.map((ingredient) => (
-                <RecepieItem key={ingredient} >{ingredient}</RecepieItem>
+                <RecepieItem
+                    key={ingredient}
+                    item={ingredient}
+                    index={selectedRecepie.ingredients.indexOf(ingredient)+1}
+                />
             ))}
             <Text style={styles.title}>Steps</Text>
             {selectedRecepie.steps.map((step) => (
-                <RecepieItem key={step} >{step}</RecepieItem>
+                <RecepieItem
+                    key={step}
+                    item={step}
+                    index={selectedRecepie.steps.indexOf(step)+1}
+                />
             ))}
         </ScrollView>
     );
@@ -72,7 +81,7 @@ RecepieDetailScreen.navigationOptions = navigationData => {
             <Item
                 title="Favorite"
                 iconName={isFavorite ? 'ios-heart' : 'ios-heart-empty'}
-                color='#ff6666'
+                color={isFavorite ? '#ff3333' : 'white'}
                 onPress={toggleFavorite} />
         </HeaderButtons>
     };
@@ -87,24 +96,33 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         padding: 15,
         justifyContent: "space-around",
-        backgroundColor:'#e6ecff',
+        backgroundColor: '#e6ecff',
     },
     title: {
         fontFamily: 'open-sans-bold',
         fontSize: 22,
-        textAlign: "center",
+        textAlign: 'left',
         backgroundColor: Colors.secondaryColor,
         borderRadius: 10,
         elevation: 5,
         margin: 20,
-        padding: 5
+        padding: 5,
+        paddingLeft: 15
     },
     recepieItem: {
+        flex: 1,
+        justifyContent: 'flex-start',
+        flexDirection: 'row',
         marginVertical: 10,
         marginHorizontal: 20,
         borderColor: '#ccc',
         borderWidth: 1,
-        padding: 10
+        padding: 15,
+        fontFamily: 'open-sans'
+    },
+    index: {
+        paddingRight: 10,
+        fontFamily:'open-sans-bold'
     }
 });
 

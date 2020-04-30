@@ -12,6 +12,7 @@ import RecepieDetailScreen from '../screens/RecepieDetailScreen';
 import FavoritesScreen from '../screens/FavoritesScreen'
 import FiltersScreen from '../screens/FiltersScreen';
 import SearchScreen from '../screens/SearchScreen'
+import ContactUsScreen from '../screens/ContactUsScreen'
 import Colors from '../constants/Colors';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -77,9 +78,9 @@ const tabScreenConfig = {
         navigationOptions: {
             tabBarLabel: 'Favorites!',
             tabBarIcon: (tabInfo) => {
-                return <Ionicons name='ios-heart-empty' size={25} color={tabInfo.tintColor} />
+                return <Ionicons name='ios-heart' size={25} color={tabInfo.tintColor} />
             },
-            tabBarColor: Colors.accentColor,
+            tabBarColor: '#ff3333',
             tabBarLabel: Platform === 'android' ?
                 <Text
                     style={{ fontFamily: 'open-sans-bold' }}
@@ -116,6 +117,13 @@ const FiltersNavigator = createStackNavigator({
     }
 )
 
+const ContactUsNavigator = createStackNavigator({
+    ContactUs: ContactUsScreen
+}, {
+        defaultNavigationOptions: defaultStackNavOption
+    }
+)
+
 const MainNavigator = createDrawerNavigator({
     RecepiesFav: {
         screen: RecepiesFavTabNavigator,
@@ -123,7 +131,8 @@ const MainNavigator = createDrawerNavigator({
             drawerLabel: 'Recepies'
         }
     },
-    Filters: FiltersNavigator
+    Filters: FiltersNavigator,
+    'Contact Us': ContactUsNavigator
 }, {
         contentOptions: {
             activeTintColor: Colors.accentColor,

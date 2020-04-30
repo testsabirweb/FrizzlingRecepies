@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     },
     recepieRow: {
         flexDirection: 'row',
-        backgroundColor: 'rgba(0,0,0,0.05)'
+        backgroundColor: 'rgba(0,0,0,0.1)'
     },
     recepieHeader: {
         height: '85%'

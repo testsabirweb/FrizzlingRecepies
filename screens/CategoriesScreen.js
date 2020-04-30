@@ -34,7 +34,7 @@ const CategoriesScreen = props => {
                 keyExtractor={(item, index) => item.id}
                 data={CATEGORIES}
                 renderItem={renderGridItem}
-                numColumns={1}
+                numColumns={2}
             />
         </View>
     );
