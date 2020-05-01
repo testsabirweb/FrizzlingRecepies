@@ -29,6 +29,12 @@ const recepiesReducer = (state = initialState, action) => {
                 if (appliedFilters.vegetarian && !recepie.isVegetarian) {
                     return false
                 }
+                if (appliedFilters.nonVeg && !recepie.isNonVeg) {
+                    return false
+                }
+                if (appliedFilters.lessThan5 && !recepie.isLessThan5) {
+                    return false
+                }
                 return true
             })
             return ({ ...state, filteredRecepies: updatedFilteredRecepies })

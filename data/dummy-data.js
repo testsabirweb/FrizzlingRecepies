@@ -40,6 +40,8 @@ export const RECEPIES = [
         ],
         false,
         true,
+        true,
+        false
     ),
     new Recepie(
         'r3',
@@ -62,6 +64,8 @@ export const RECEPIES = [
         ],
         true,
         false,
+        false,
+        true
     ),
     new Recepie(
         'r1',
@@ -90,6 +94,76 @@ export const RECEPIES = [
         ],
         true,
         true,
+        false,
+        false
+    ),
+    new Recepie(
+        'r5',
+        ['c2', 'c7'],
+        'Cheese Sandwich',
+        'Cheap',
+        'Easy',
+        'https://erhardtseat.com/wp-content/uploads/2019/06/Grilled-Goat-Cheese-Sandwich-Recipe-BLOG-4.jpg',
+        15,
+        [
+            '6 bread- brown',
+            '1 medium finely chopped tomato',
+            '1 medium thinly sliced onion',
+            '1/2 pinch salt',
+            '1 medium finely chopped cucumber',
+            '3 slices cheese slices',
+            '1/4 teaspoon spice black pepper',
+            '2 teaspoon butter',
+        ],
+        [
+            'Take chopped mixed vegetables in a bowl and add in salt & pepper.',
+            'Toss and assemble by placing a cheese slice on a bread slice and spreading 2-3 table spoons of mixed vegetables on it and covering it with another bread slice.',
+            'Add little butter to a pan and toast the sandwich until it turns crisp on both the sides. Serve warm.'
+        ],
+        true,
+        true,
+        false,
+        false
+    ),
+    new Recepie(
+        'r6',
+        ['c4', 'c2'],
+        'Veg Noodles',
+        'Affordable',
+        'Easy',
+        'https://ratlamee.com/wp-content/uploads/2018/12/Veg-Noodles.jpg',
+        25,
+        [
+            '300 grams noodles, I used Ching Hakka Noodles',
+            '1 tsp Salt',
+            '1 tsp Oil',
+            '1 tsp Garlic paste',
+            '1 tsp Ginger paste',
+            '1/2 Cup Beans',
+            '1/2 Cup Cabbage, chopped',
+            '1/2 Cup Carrot, chopped',
+            '1/2 Cup Spring onion, chopped',
+            '1/2 Cup Capsicum, chopped',
+            '2 Tbsp Soy sauce',
+            '2 Tbsp Green chilli sauce',
+            '1 Tbsp Tomato sauce',
+        ],
+        [
+            'Boil the noodles in a pan till it starts to simmer.',
+            'Add salt and some oil to the boiling noodles.',
+            'When the noodles start to e a little sticky, drain the excess water and wash them in cold water.',
+            'In another pan, heat about 3 teaspoon of oil.',
+            'Put ginger paste followed by garlic paste. Saute them well till golden brown.',
+            'Now add all the vegetables to the pan.',
+            'Saute them well and add soy sauce, green chilli sauce and tomato sauce.',
+            'Mix them well and now add the boiled noodles to them.',
+            'Mix them thoroughly with the vegetables.',
+            'Serve hot.'
+        ],
+        true,
+        true,
+        false,
+        false
     ),
     new Recepie(
         'r4',
@@ -115,5 +189,7 @@ export const RECEPIES = [
         ],
         false,
         false,
+        true,
+        false
     )
 ];

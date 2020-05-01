@@ -28,14 +28,18 @@ const FiltersScreen = props => {
 
     const [isSugarFree, setIsSugarFree] = useState(false)
     const [isVegetarian, setIsVegetarian] = useState(false)
+    const [isNonVeg, setIsNonVeg] = useState(false)
+    const [isLessthan5, setIsLessThan5] = useState(false)
 
     const saveFilters = useCallback(() => {
         const appliedFilters = {
             sugarFree: isSugarFree,
-            vegetarian: isVegetarian
+            vegetarian: isVegetarian,
+            nonVeg: isNonVeg,
+            lessThan5: isLessthan5
         }
         dispatch(setFilters(appliedFilters))
-    }, [isSugarFree, isVegetarian, dispatch])
+    }, [isSugarFree, isVegetarian, isNonVeg, isLessthan5, dispatch])
 
     useEffect(() => {
         navigation.setParams({ save: saveFilters })
@@ -53,6 +57,16 @@ const FiltersScreen = props => {
                 label='Vegetarian'
                 state={isVegetarian}
                 onStateChange={(newValue) => setIsVegetarian(newValue)}
+            />
+            <FilterSwitch
+                label='Non-Veg'
+                state={isNonVeg}
+                onStateChange={(newValue) => setIsNonVeg(newValue)}
+            />
+            <FilterSwitch
+                label='Less than 5 min'
+                state={isLessthan5}
+                onStateChange={(newValue) => setIsLessThan5(newValue)}
             />
         </View>
     );

@@ -118,6 +118,7 @@ const styles = StyleSheet.create({
         borderColor: '#ccc',
         borderWidth: 1,
         padding: 15,
+        paddingRight:20,
         fontFamily: 'open-sans'
     },
     index: {

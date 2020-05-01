@@ -10,7 +10,9 @@ class Recepie {
         ingredients,
         steps,
         isVegetarian,
-        isSugarFree
+        isSugarFree,
+        isNonVeg,
+        isLessThan5
     ) {
         this.id = id;
         this.categoryIds = categoryIds;
@@ -22,7 +24,9 @@ class Recepie {
         this.complexity = complexity;
         this.affordability = affordability;
         this.isVegetarian = isVegetarian;
-        this.isSugarFree=isSugarFree
+        this.isSugarFree = isSugarFree;
+        this.isNonVeg = isNonVeg;
+        this.isLessThan5 = isLessThan5;
     }
 }
 

@@ -35,7 +35,7 @@ const ContactUsScreen = (props) => {
             <TouchableCmp style={{ flex: 1 }} onPress={handelMail}>
                 <View style={styles.gmail}>
                     <HeaderButtons HeaderButtonComponent={HeaderButton}>
-                        <Item title='Menu' iconName='ios-mail' />
+                        <Item title='Menu' iconName='ios-mail' iconSize={40} />
                     </HeaderButtons>
                     <Text>testsabirweb@gmail.com</Text>
                 </View>
@@ -44,8 +44,8 @@ const ContactUsScreen = (props) => {
             <TouchableCmp style={{ flex: 1 }} onPress={handelGit}>
                 <View style={styles.github}>
                     <HeaderButtons
-                    HeaderButtonComponent={HeaderButton}>
-                        <Item title='Menu' iconName='logo-github' color="black" />
+                        HeaderButtonComponent={HeaderButton}>
+                        <Item title='Menu' iconName='logo-github' color="black" iconSize={40}/>
                     </HeaderButtons>
                     <Text>https://github.com/testsabirweb/FrizzlingRecepies</Text>
                 </View>
@@ -86,7 +86,9 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         overflow: Platform.OS === 'android' && Platform.version >= 21 ? 'hidden' : 'visible',
         alignItems: 'center',
-        width: 250
+        width: 250,
+        elevation: 5,
+        height: 110
     },
     github: {
         backgroundColor: '#cccccc',
@@ -96,7 +98,9 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         overflow: Platform.OS === 'android' && Platform.version >= 21 ? 'hidden' : 'visible',
         alignItems: 'center',
-        width: 250
+        width: 250,
+        elevation: 5,
+        height: 110
     }
 });
 
