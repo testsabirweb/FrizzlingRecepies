@@ -2,14 +2,14 @@ import Category from '../models/category';
 import Recepie from '../models/recepie';
 
 export const CATEGORIES = [
-    new Category('c1', 'Healthy', '#9eecff'),
-    new Category('c2', 'Quick & Easy', '#ffccff'),
-    new Category('c3', 'Sweets', '#ffff80'),
-    new Category('c4', 'Chinese', '#b3ffb3'),
-    new Category('c5', 'Light & Lovely', '#80ffbf'),
-    new Category('c6', 'Dinner', '#368dff'),
-    new Category('c7', 'Breakfast', '#9999ff'),
-    new Category('c8', 'Indian', '#b9ffb0'),
+    new Category('c1', 'Healthy', 'https://c.ndtvimg.com/1hkfbvu_som-tam-salad_625x300_04_September_18.jpg'),
+    new Category('c2', 'Quick & Easy', 'https://erhardtseat.com/wp-content/uploads/2019/06/Grilled-Goat-Cheese-Sandwich-Recipe-BLOG-4.jpg'),
+    new Category('c3', 'Sweets', 'https://cdn3.foodviva.com/static-content/food-images/milkshake-recipes/coffee-milkshake-recipe/coffee-milkshake-recipe.jpg'),
+    new Category('c4', 'Chinese', 'https://ratlamee.com/wp-content/uploads/2018/12/Veg-Noodles.jpg'),
+    new Category('c5', 'Light & Lovely', 'https://c.ndtvimg.com/2019-08/7m027um_kanda-poha_625x300_14_August_19.jpg'),
+    new Category('c6', 'Dinner', 'https://cdn.pixabay.com/photo/2018/06/18/16/05/indian-food-3482749_1280.jpg'),
+    new Category('c7', 'Breakfast', 'https://www.ndtv.com/cooks/images/samosa-620.jpg'),
+    new Category('c8', 'Indian', 'https://c.ndtvimg.com/2019-04/fu9tv9uo_chhole-bhature_625x300_11_April_19.jpg'),
 ];
 
 export const RECEPIES = [
